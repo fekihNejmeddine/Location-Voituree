@@ -1,0 +1,22 @@
+/* ── Cars.css ── */
+
+.cars-filter-bar {
+  background:    var(--ink-2);
+  border:        1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding:       1.2rem 1.5rem;
+  display:       flex;
+  gap:           1rem;
+  flex-wrap:     wrap;
+  align-items:   flex-end;
+  margin-bottom: 2rem;
+}
+.cars-filter-bar .form-group { margin: 0; flex: 1; min-width: 150px; }
+.cars-filter-actions         { display: flex; align-items: flex-end; }
+
+.cars-results-count { margin-bottom: 1.5rem; color: var(--subtle); font-size: .85rem; }
+.cars-results-count strong { color: var(--gold); font-weight: 600; }
+
+@media (max-width: 600px) {
+  .cars-filter-bar { flex-direction: column; }
+}

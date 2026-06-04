@@ -1,0 +1,32 @@
+/* ── Footer.css ── */
+.footer {
+  background:  var(--ink-2);
+  border-top:  1px solid var(--line);
+  padding:     2rem 0;
+  color:       var(--subtle);
+  font-size:   .83rem;
+}
+
+.footer-inner {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  flex-wrap:       wrap;
+  gap:             1rem;
+}
+
+.footer-brand {
+  font-family:   var(--font-display);
+  color:         var(--gold);
+  font-size:     1rem;
+  margin-bottom: .25rem;
+}
+
+.footer-links { display: flex; gap: 1.5rem; }
+
+.footer-link {
+  color:      var(--subtle);
+  transition: color .18s;
+  font-size:  .83rem;
+}
+.footer-link:hover { color: var(--gold); }

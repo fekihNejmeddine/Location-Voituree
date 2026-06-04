@@ -1,0 +1,108 @@
+.car-card {
+  cursor: default;
+}
+.car-card-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.car-card-img {
+  width: 100%;
+  height: 195px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.car-card:hover .car-card-img {
+  transform: scale(1.04);
+}
+.car-card-img-ph {
+  width: 100%;
+  height: 195px;
+  background: var(--bg-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: var(--text-4);
+}
+.car-card-cat {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(6px);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border: 1px solid rgba(212, 168, 67, 0.3);
+}
+.car-card-status {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-2);
+}
+.car-card-status.ok {
+  background: var(--ok);
+  box-shadow: 0 0 6px var(--ok);
+}
+.car-card-status.no {
+  background: var(--err);
+}
+.car-card-body {
+  padding: 1.1rem 1.2rem;
+}
+.car-card-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+.car-card-year {
+  font-weight: 400;
+  font-size: 0.84rem;
+  color: var(--text-3);
+}
+.car-card-agence {
+  font-size: 0.76rem;
+  color: var(--text-3);
+  margin-bottom: 0.5rem;
+}
+.car-card-meta {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  font-size: 0.76rem;
+  color: var(--text-3);
+  margin-bottom: 1rem;
+}
+.car-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+.car-price {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.car-price span {
+  font-family: "Inter", sans-serif;
+  font-size: 0.73rem;
+  font-weight: 400;
+  color: var(--text-3);
+}
+.grid-cars {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1.4rem;
+}

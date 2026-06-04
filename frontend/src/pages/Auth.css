@@ -1,0 +1,57 @@
+/* ── Auth.css  (shared by Login.js and Register.js) ── */
+
+.auth-page {
+  min-height: 100vh;
+  display:    flex;
+  align-items:center;
+  justify-content: center;
+  padding:    2rem;
+  background: var(--ink);
+  position:   relative;
+  overflow:   hidden;
+}
+
+/* Ambient glow background */
+.auth-page::before {
+  content:          '';
+  position:         absolute;
+  width:            500px;
+  height:           500px;
+  background:       radial-gradient(circle, rgba(201,168,76,.05) 0%, transparent 70%);
+  top:              50%; left: 50%;
+  transform:        translate(-50%, -50%);
+  pointer-events:   none;
+}
+
+.auth-box {
+  background:    var(--ink-2);
+  border:        1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding:       2.6rem 2.3rem;
+  width:         100%;
+  max-width:     430px;
+  box-shadow:    var(--shadow-lg);
+  position:      relative;
+  z-index:       1;
+}
+
+.auth-logo {
+  font-family:   var(--font-display);
+  font-size:     1.4rem;
+  color:         var(--gold);
+  text-align:    center;
+  margin-bottom: 2rem;
+}
+
+.auth-title    { font-size: 1.5rem; text-align: center; margin-bottom: .35rem; }
+.auth-subtitle { text-align: center; color: var(--subtle); font-size: .86rem; margin-bottom: 1.8rem; }
+
+.auth-submit { width: 100%; justify-content: center; margin-top: .5rem; }
+
+.auth-footer { text-align: center; margin-top: 1.4rem; font-size: .86rem; color: var(--subtle); }
+.auth-footer a { color: var(--gold); font-weight: 500; }
+.auth-footer a:hover { color: var(--gold-lt); }
+
+@media (max-width: 480px) {
+  .auth-box { padding: 2rem 1.4rem; }
+}

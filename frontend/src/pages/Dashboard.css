@@ -1,0 +1,150 @@
+/* ── Dashboard.css ── */
+
+/* ── USER: reservation cards ── */
+.reservation-card {
+  background:    var(--ink-2);
+  border:        1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding:       1.2rem 1.4rem;
+  display:       grid;
+  grid-template-columns: 85px 1fr auto;
+  gap:           1.2rem;
+  align-items:   center;
+  margin-bottom: .9rem;
+  transition:    border-color .2s;
+}
+.reservation-card:hover { border-color: rgba(201,168,76,.3); }
+
+.reservation-car-img {
+  width:         85px;
+  height:        62px;
+  object-fit:    cover;
+  border-radius: var(--r);
+  border:        1px solid var(--line);
+  background:    var(--ink-3);
+}
+.reservation-car-placeholder {
+  width:            85px;
+  height:           62px;
+  background:       var(--ink-3);
+  border-radius:    var(--r);
+  border:           1px solid var(--line);
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  font-size:        1.5rem;
+  color:            var(--muted);
+}
+
+.reservation-info h4 {
+  font-family:   var(--font-display);
+  font-weight:   600;
+  margin-bottom: .2rem;
+  font-size:     1rem;
+}
+.reservation-info p { font-size: .8rem; color: var(--subtle); line-height: 1.6; }
+.reservation-info .badge { margin-top: .3rem; }
+
+.reservation-price {
+  font-family: var(--font-display);
+  font-size:   1.2rem;
+  color:       var(--gold);
+  font-weight: 700;
+  text-align:  right;
+}
+.reservation-actions { display: flex; flex-direction: column; align-items: flex-end; gap: .5rem; margin-top: .4rem; }
+
+/* ── ADMIN: stat cards ── */
+.admin-stats {
+  display:               grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap:                   1rem;
+  margin-bottom:         2.5rem;
+}
+.stat-card {
+  background:    var(--ink-2);
+  border:        1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding:       1.4rem;
+  position:      relative;
+  overflow:      hidden;
+}
+.stat-card::before {
+  content:    '';
+  position:   absolute;
+  top:        0; left: 0; right: 0;
+  height:     2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-lt));
+}
+.stat-num   { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: .3rem; }
+.stat-label { font-size: .75rem; color: var(--subtle); text-transform: uppercase; letter-spacing: .08em; }
+
+/* ── ADMIN: tabs ── */
+.admin-tabs {
+  display:       flex;
+  gap:           .5rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.5rem;
+}
+.admin-tab {
+  padding:       .65rem 1.2rem;
+  background:    none;
+  border:        none;
+  border-bottom: 2px solid transparent;
+  color:         var(--subtle);
+  font-family:   var(--font-body);
+  font-size:     .88rem;
+  font-weight:   500;
+  cursor:        pointer;
+  transition:    color .18s;
+  margin-bottom: -1px;
+}
+.admin-tab:hover      { color: var(--white-2); }
+.admin-tab.active     { border-bottom-color: var(--gold); color: var(--gold); }
+
+/* ── ADMIN: table ── */
+.admin-table-wrap {
+  background:    var(--ink-2);
+  border:        1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow:      hidden;
+}
+.admin-table             { width: 100%; border-collapse: collapse; }
+.admin-table th {
+  padding:        .8rem 1.1rem;
+  text-align:     left;
+  font-size:      .7rem;
+  color:          var(--subtle);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border-bottom:  1px solid var(--line);
+  background:     var(--ink-3);
+}
+.admin-table td {
+  padding:       .85rem 1.1rem;
+  font-size:     .86rem;
+  border-bottom: 1px solid rgba(37,37,48,.6);
+  color:         var(--white-2);
+}
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-table tr:hover td      { background: var(--glass); }
+.admin-table-cell-sub         { font-size: .75rem; color: var(--subtle); margin-top: .1rem; }
+.admin-table-price            { color: var(--gold); font-family: var(--font-display); }
+.admin-table-actions          { display: flex; gap: .4rem; }
+
+/* ── ADMIN: add car form ── */
+.admin-form { max-width: 600px; }
+.admin-form-grid {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   1rem;
+  margin-bottom:         1rem;
+}
+.admin-form-grid .form-group { margin: 0; }
+
+@media (max-width: 768px) {
+  .reservation-card      { grid-template-columns: 1fr; }
+  .admin-form-grid       { grid-template-columns: 1fr; }
+  .admin-table th,
+  .admin-table td        { padding: .65rem .75rem; font-size: .8rem; }
+}
