@@ -8,4 +8,4 @@ router.get("/me", protect, ctrl.getMe);
 router.put("/profile", protect, ctrl.updateProfile);
 router.put("/password", protect, ctrl.changePassword);
 
-module.exports = router;
+module.exports = router; 
