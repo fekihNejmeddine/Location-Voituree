@@ -14,6 +14,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
+import AdminDashboard from "./pages/adminDashboard";
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
 
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          
+          <Route path="/admin" element={<AdminDashboard />} />
 
           <Route
             path="/dashboard"

@@ -2,7 +2,7 @@ const { pool } = require("../config/db");
 
 const BASE_SELECT = `
   SELECT r.*,
-         c.brand, c.model, c.year, c.image AS car_image, c.color,
+         c.brand, c.model, c.year, c.image AS car_image,
          a.nom AS agence_nom, a.ville AS agence_ville,
          u.name AS user_name, u.email AS user_email
   FROM reservations r
